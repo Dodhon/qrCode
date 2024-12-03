@@ -4,7 +4,6 @@ import os
 from io import BytesIO
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'  # Replace with a secure key in production
 
 # Define the directory to save QR codes
 DIRECTORY = os.path.join(os.getcwd(), 'qr_codes')

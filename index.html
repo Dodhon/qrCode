@@ -6,23 +6,12 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-  <div class="container">
-    <h2>QR Code Generator</h2>
-    {% with messages = get_flashed_messages(with_categories=true) %}
-      {% if messages %}
-        <ul class="flashes">
-          {% for category, message in messages %}
-            <li class="{{ category }}">{{ message }}</li>
-          {% endfor %}
-        </ul>
-      {% endif %}
-    {% endwith %}
     <form method="POST" action="/">
-      <label for="name">Your Name:</label>
+      <label for="name">Title:</label>
       <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
       <label for="url">URL:</label>
-      <input type="url" id="url" name="url" placeholder="Enter the URL" required>
+      <input type="text" id="url" name="url" placeholder="Enter the URL" required>
 
       <button type="submit">Generate & Download QR Code</button>
     </form>
