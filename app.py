@@ -24,7 +24,7 @@ def get_qr_code(link, name):
     response = requests.get(endpoint)
     return response.content
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/', methods=['POST'])
 def index():
     if request.method == 'POST':
         name = request.form.get('name').strip()
